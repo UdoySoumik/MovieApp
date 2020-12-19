@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,80 +11,81 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="GP_Movie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hVv-hg-pTK">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="homeCollectionCell" rowHeight="305" id="BKU-cb-R9H">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="305"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CollectionTableViewCell" rowHeight="386" id="BKU-cb-R9H" customClass="CollectionTableViewCell" customModule="GP_Movie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="386"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BKU-cb-R9H" id="mlF-1O-tAe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NCN-xb-RNp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HYu-Xj-AJW">
-                                                        <size key="itemSize" width="253" height="297"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HYu-Xj-AJW">
+                                                        <size key="itemSize" width="253" height="383"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8E9-N2-w9t">
-                                                            <rect key="frame" x="80.5" y="0.0" width="253" height="297"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="8E9-N2-w9t" customClass="HomeCollectionViewCell" customModule="GP_Movie" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="1.5" width="253" height="383"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="euW-m8-2qN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="253" height="297"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="253" height="383"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA0-E3-uma">
-                                                                        <rect key="frame" x="68.5" y="5" width="116" height="24"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EA0-E3-uma">
+                                                                        <rect key="frame" x="68.5" y="10" width="116" height="24"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NgI-bA-BOy">
-                                                                        <rect key="frame" x="26.5" y="42" width="200" height="120"/>
+                                                                        <rect key="frame" x="1.5" y="44" width="250" height="200"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="200" id="JrZ-Ne-JXP"/>
-                                                                            <constraint firstAttribute="height" constant="120" id="nMc-6O-NN9"/>
+                                                                            <constraint firstAttribute="width" constant="250" id="JrZ-Ne-JXP"/>
+                                                                            <constraint firstAttribute="height" constant="200" id="nMc-6O-NN9"/>
                                                                         </constraints>
                                                                     </imageView>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-vt-oXE">
-                                                                        <rect key="frame" x="102" y="170" width="49" height="20.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WG-vt-oXE">
+                                                                        <rect key="frame" x="102" y="252" width="49" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-3m-pSu">
-                                                                        <rect key="frame" x="-2.5" y="204" width="258" height="20.5"/>
+                                                                        <rect key="frame" x="-2.5" y="286" width="258" height="20.5"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-0s-J1o">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 January, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFJ-z9-Odu">
                                                                                 <rect key="frame" x="117" y="0.0" width="141" height="20.5"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="EA0-E3-uma" firstAttribute="top" secondItem="euW-m8-2qN" secondAttribute="top" constant="5" id="8Gj-37-6z1"/>
+                                                                    <constraint firstItem="EA0-E3-uma" firstAttribute="top" secondItem="euW-m8-2qN" secondAttribute="top" constant="10" id="8Gj-37-6z1"/>
                                                                     <constraint firstItem="0WG-vt-oXE" firstAttribute="centerX" secondItem="euW-m8-2qN" secondAttribute="centerX" id="E9s-CX-Via"/>
-                                                                    <constraint firstItem="NgI-bA-BOy" firstAttribute="top" secondItem="EA0-E3-uma" secondAttribute="bottom" constant="13" id="Ftf-I4-Kd6"/>
+                                                                    <constraint firstItem="NgI-bA-BOy" firstAttribute="top" secondItem="EA0-E3-uma" secondAttribute="bottom" constant="10" id="Ftf-I4-Kd6"/>
+                                                                    <constraint firstItem="EA0-E3-uma" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="euW-m8-2qN" secondAttribute="leading" constant="30" id="Jyu-cR-VFo"/>
                                                                     <constraint firstItem="agJ-3m-pSu" firstAttribute="top" secondItem="0WG-vt-oXE" secondAttribute="bottom" constant="13.5" id="Kw6-Jk-4za"/>
                                                                     <constraint firstItem="0WG-vt-oXE" firstAttribute="top" secondItem="NgI-bA-BOy" secondAttribute="bottom" constant="8" symbolic="YES" id="LBQ-UN-WgO"/>
                                                                     <constraint firstItem="EA0-E3-uma" firstAttribute="centerX" secondItem="euW-m8-2qN" secondAttribute="centerX" id="Tbc-iz-aLG"/>
@@ -93,9 +93,20 @@
                                                                     <constraint firstItem="agJ-3m-pSu" firstAttribute="centerX" secondItem="euW-m8-2qN" secondAttribute="centerX" id="yaI-O9-KLt"/>
                                                                 </constraints>
                                                             </collectionViewCellContentView>
-                                                            <size key="customSize" width="253" height="297"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <size key="customSize" width="253" height="383"/>
+                                                            <connections>
+                                                                <outlet property="movieNameLabel" destination="EA0-E3-uma" id="E1y-cC-oWb"/>
+                                                                <outlet property="moviePosterImage" destination="NgI-bA-BOy" id="Eop-d8-rYV"/>
+                                                                <outlet property="movieRating" destination="0WG-vt-oXE" id="bOb-Ed-bEH"/>
+                                                                <outlet property="releaseDate" destination="aFJ-z9-Odu" id="9h4-aS-zvQ"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="BYZ-38-t0r" id="K86-1M-4xC"/>
+                                                        <outlet property="delegate" destination="BYZ-38-t0r" id="3Zt-ra-81G"/>
+                                                    </connections>
                                                 </collectionView>
                                             </subviews>
                                             <constraints>
@@ -105,35 +116,39 @@
                                                 <constraint firstItem="NCN-xb-RNp" firstAttribute="leading" secondItem="mlF-1O-tAe" secondAttribute="leading" id="zEZ-mr-mx6"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="horizontalCollectionView" destination="NCN-xb-RNp" id="NWl-aI-hRT"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrendingTableViewCell" rowHeight="295" id="gDo-d4-F4z" customClass="TrendingTableViewCell" customModule="MovieApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="333" width="414" height="295"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TrendingTableViewCell" rowHeight="295" id="gDo-d4-F4z" customClass="TrendingTableViewCell" customModule="GP_Movie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="414" width="414" height="295"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gDo-d4-F4z" id="BnP-Qw-34q">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Zw-aun">
-                                                    <rect key="frame" x="149" y="29" width="116" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jfA-Zw-aun">
+                                                    <rect key="frame" x="149" y="10" width="116" height="24"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rFM-Xc-9BM">
-                                                    <rect key="frame" x="107" y="83" width="200" height="120"/>
+                                                    <rect key="frame" x="82" y="44" width="250" height="200"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="7hf-KM-685"/>
-                                                        <constraint firstAttribute="height" constant="120" id="thS-ca-C0R"/>
+                                                        <constraint firstAttribute="width" constant="250" id="7hf-KM-685"/>
+                                                        <constraint firstAttribute="height" constant="200" id="thS-ca-C0R"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsv-85-mmf">
-                                                    <rect key="frame" x="182.5" y="211" width="49" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsv-85-mmf">
+                                                    <rect key="frame" x="182.5" y="252" width="49" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T2L-6D-Nmt">
-                                                    <rect key="frame" x="78.5" y="245" width="257.5" height="20.5"/>
+                                                    <rect key="frame" x="78.5" y="286" width="257.5" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lun-rI-ONI">
                                                             <rect key="frame" x="0.0" y="0.0" width="111.5" height="20.5"/>
@@ -141,13 +156,13 @@
                                                                 <constraint firstAttribute="width" constant="111.5" id="469-bY-8kZ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 January, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qI-nS-04I">
                                                             <rect key="frame" x="116.5" y="0.0" width="141" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -158,13 +173,14 @@
                                                 <constraint firstItem="rFM-Xc-9BM" firstAttribute="centerX" secondItem="BnP-Qw-34q" secondAttribute="centerX" id="Lv2-TO-RIA"/>
                                                 <constraint firstItem="jfA-Zw-aun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BnP-Qw-34q" secondAttribute="leading" constant="30" id="eZM-kQ-SHC"/>
                                                 <constraint firstItem="hsv-85-mmf" firstAttribute="top" secondItem="rFM-Xc-9BM" secondAttribute="bottom" constant="8" symbolic="YES" id="fkN-V4-rJs"/>
-                                                <constraint firstItem="rFM-Xc-9BM" firstAttribute="top" secondItem="jfA-Zw-aun" secondAttribute="bottom" constant="30" id="l6G-vB-Lmt"/>
-                                                <constraint firstItem="jfA-Zw-aun" firstAttribute="top" secondItem="BnP-Qw-34q" secondAttribute="top" constant="29" id="nCR-C7-6Qa"/>
+                                                <constraint firstItem="rFM-Xc-9BM" firstAttribute="top" secondItem="jfA-Zw-aun" secondAttribute="bottom" constant="10" id="l6G-vB-Lmt"/>
+                                                <constraint firstItem="jfA-Zw-aun" firstAttribute="top" secondItem="BnP-Qw-34q" secondAttribute="top" constant="10" id="nCR-C7-6Qa"/>
                                                 <constraint firstItem="hsv-85-mmf" firstAttribute="centerX" secondItem="BnP-Qw-34q" secondAttribute="centerX" id="tY8-zV-Wdx"/>
                                                 <constraint firstItem="T2L-6D-Nmt" firstAttribute="top" secondItem="hsv-85-mmf" secondAttribute="bottom" constant="13.5" id="w2x-bY-Stx"/>
                                                 <constraint firstItem="jfA-Zw-aun" firstAttribute="centerX" secondItem="BnP-Qw-34q" secondAttribute="centerX" id="y7P-cY-p2B"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="movieNameLabel" destination="jfA-Zw-aun" id="hnM-U1-DqY"/>
                                             <outlet property="moviePosterImage" destination="rFM-Xc-9BM" id="pV7-Vb-x56"/>
@@ -180,7 +196,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hVv-hg-pTK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="PBb-Xs-sAq"/>
                             <constraint firstItem="hVv-hg-pTK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XFl-yu-Y47"/>
@@ -202,9 +218,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wr4-6G-Oap" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TuW-dR-brI">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="TuW-dR-brI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -216,9 +239,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="58.928571428571423"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

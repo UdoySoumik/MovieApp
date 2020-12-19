@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1133D180258DF9690068AEAF /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D17F258DF9690068AEAF /* CollectionTableViewCell.swift */; };
+		1133D185258DFEDD0068AEAF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D184258DFEDD0068AEAF /* HomeCollectionViewCell.swift */; };
+		1133D18C258E0B3C0068AEAF /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D184258DFEDD0068AEAF /* HomeCollectionViewCell.swift */; };
+		1133D18D258E0B3C0068AEAF /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */; };
+		1133D18E258E0B3C0068AEAF /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D17F258DF9690068AEAF /* CollectionTableViewCell.swift */; };
+		1133D18F258E0B3C0068AEAF /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D2258DD3E500E99BA0 /* ApiManager.swift */; };
+		1133D190258E0B3C0068AEAF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E93291258DC751000612FD /* HomeViewController.swift */; };
+		1133D191258E0B3C0068AEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E9328D258DC751000612FD /* AppDelegate.swift */; };
+		1133D192258E0B3C0068AEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E9328F258DC751000612FD /* SceneDelegate.swift */; };
+		1133D194258E0B3C0068AEAF /* Pods_MovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02EA28C4E341E696A26346F2 /* Pods_MovieApp.framework */; };
+		1133D196258E0B3C0068AEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E93298258DC756000612FD /* LaunchScreen.storyboard */; };
+		1133D197258E0B3C0068AEAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11E93296258DC756000612FD /* Assets.xcassets */; };
+		1133D198258E0B3C0068AEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E93293258DC751000612FD /* Main.storyboard */; };
+		1133D1B0258E0C6C0068AEAF /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */; };
+		1133D1B5258E0C740068AEAF /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */; };
 		11B882D3258DD3E500E99BA0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D2258DD3E500E99BA0 /* ApiManager.swift */; };
 		11B882D8258DDD5C00E99BA0 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */; };
 		11E9328E258DC751000612FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E9328D258DC751000612FD /* AppDelegate.swift */; };
@@ -41,9 +56,14 @@
 
 /* Begin PBXFileReference section */
 		02EA28C4E341E696A26346F2 /* Pods_MovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1133D17F258DF9690068AEAF /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
+		1133D184258DFEDD0068AEAF /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1133D19D258E0B3C0068AEAF /* Telenor_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telenor_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1133D19E258E0B3C0068AEAF /* MovieApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MovieApp copy-Info.plist"; path = "/Users/soumik/Desktop/MovieApp/MovieApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		11B882D2258DD3E500E99BA0 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
-		11E9328A258DC751000612FD /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11E9328A258DC751000612FD /* GP_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GP_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E9328D258DC751000612FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E9328F258DC751000612FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		11E93291258DC751000612FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +88,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1133D193258E0B3C0068AEAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1133D194258E0B3C0068AEAF /* Pods_MovieApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11E93287258DC751000612FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,15 +132,17 @@
 				11E9328B258DC751000612FD /* Products */,
 				D7F5FFEC481F0111F2C3E171 /* Pods */,
 				936D6E6409EF26107D0E2E5C /* Frameworks */,
+				1133D19E258E0B3C0068AEAF /* MovieApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		11E9328B258DC751000612FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11E9328A258DC751000612FD /* MovieApp.app */,
+				11E9328A258DC751000612FD /* GP_Movie.app */,
 				11E932A0258DC756000612FD /* MovieAppTests.xctest */,
 				11E932AB258DC756000612FD /* MovieAppUITests.xctest */,
+				1133D19D258E0B3C0068AEAF /* Telenor_Movie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				11E932C3258DCB93000612FD /* Storyboards */,
+				1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +202,8 @@
 			children = (
 				11E93291258DC751000612FD /* HomeViewController.swift */,
 				11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */,
+				1133D17F258DF9690068AEAF /* CollectionTableViewCell.swift */,
+				1133D184258DFEDD0068AEAF /* HomeCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,9 +242,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11E93289258DC751000612FD /* MovieApp */ = {
+		1133D189258E0B3C0068AEAF /* Telenor_Movie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11E932B4258DC756000612FD /* Build configuration list for PBXNativeTarget "MovieApp" */;
+			buildConfigurationList = 1133D19A258E0B3C0068AEAF /* Build configuration list for PBXNativeTarget "Telenor_Movie" */;
+			buildPhases = (
+				1133D18A258E0B3C0068AEAF /* [CP] Check Pods Manifest.lock */,
+				1133D18B258E0B3C0068AEAF /* Sources */,
+				1133D193258E0B3C0068AEAF /* Frameworks */,
+				1133D195258E0B3C0068AEAF /* Resources */,
+				1133D199258E0B3C0068AEAF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Telenor_Movie;
+			productName = MovieApp;
+			productReference = 1133D19D258E0B3C0068AEAF /* Telenor_Movie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11E93289258DC751000612FD /* GP_Movie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11E932B4258DC756000612FD /* Build configuration list for PBXNativeTarget "GP_Movie" */;
 			buildPhases = (
 				26B30406D3409EB6AA328AFA /* [CP] Check Pods Manifest.lock */,
 				11E93286258DC751000612FD /* Sources */,
@@ -223,9 +275,9 @@
 			);
 			dependencies = (
 			);
-			name = MovieApp;
+			name = GP_Movie;
 			productName = MovieApp;
-			productReference = 11E9328A258DC751000612FD /* MovieApp.app */;
+			productReference = 11E9328A258DC751000612FD /* GP_Movie.app */;
 			productType = "com.apple.product-type.application";
 		};
 		11E9329F258DC756000612FD /* MovieAppTests */ = {
@@ -302,7 +354,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11E93289258DC751000612FD /* MovieApp */,
+				11E93289258DC751000612FD /* GP_Movie */,
+				1133D189258E0B3C0068AEAF /* Telenor_Movie */,
 				11E9329F258DC756000612FD /* MovieAppTests */,
 				11E932AA258DC756000612FD /* MovieAppUITests */,
 			);
@@ -310,6 +363,16 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1133D195258E0B3C0068AEAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1133D196258E0B3C0068AEAF /* LaunchScreen.storyboard in Resources */,
+				1133D197258E0B3C0068AEAF /* Assets.xcassets in Resources */,
+				1133D198258E0B3C0068AEAF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11E93288258DC751000612FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,6 +401,45 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		06FFC015E0C268B83D2C2858 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MovieApp/Pods-MovieApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1133D18A258E0B3C0068AEAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MovieApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1133D199258E0B3C0068AEAF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,14 +542,32 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1133D18B258E0B3C0068AEAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1133D18C258E0B3C0068AEAF /* HomeCollectionViewCell.swift in Sources */,
+				1133D18D258E0B3C0068AEAF /* TrendingTableViewCell.swift in Sources */,
+				1133D18E258E0B3C0068AEAF /* CollectionTableViewCell.swift in Sources */,
+				1133D18F258E0B3C0068AEAF /* ApiManager.swift in Sources */,
+				1133D190258E0B3C0068AEAF /* HomeViewController.swift in Sources */,
+				1133D191258E0B3C0068AEAF /* AppDelegate.swift in Sources */,
+				1133D1B5258E0C740068AEAF /* ViewExtension.swift in Sources */,
+				1133D192258E0B3C0068AEAF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		11E93286258DC751000612FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1133D185258DFEDD0068AEAF /* HomeCollectionViewCell.swift in Sources */,
 				11B882D8258DDD5C00E99BA0 /* TrendingTableViewCell.swift in Sources */,
+				1133D180258DF9690068AEAF /* CollectionTableViewCell.swift in Sources */,
 				11B882D3258DD3E500E99BA0 /* ApiManager.swift in Sources */,
 				11E93292258DC751000612FD /* HomeViewController.swift in Sources */,
 				11E9328E258DC751000612FD /* AppDelegate.swift in Sources */,
+				1133D1B0258E0C6C0068AEAF /* ViewExtension.swift in Sources */,
 				11E93290258DC751000612FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,12 +593,12 @@
 /* Begin PBXTargetDependency section */
 		11E932A2258DC756000612FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11E93289258DC751000612FD /* MovieApp */;
+			target = 11E93289258DC751000612FD /* GP_Movie */;
 			targetProxy = 11E932A1258DC756000612FD /* PBXContainerItemProxy */;
 		};
 		11E932AD258DC756000612FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11E93289258DC751000612FD /* MovieApp */;
+			target = 11E93289258DC751000612FD /* GP_Movie */;
 			targetProxy = 11E932AC258DC756000612FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,6 +623,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1133D19B258E0B3C0068AEAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EED215F764CFB92945226560 /* Pods-MovieApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU946UBV7L;
+				INFOPLIST_FILE = "MovieApp copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brotecs.MovieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1133D19C258E0B3C0068AEAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E7FA650A4063CE39E659B0 /* Pods-MovieApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GU946UBV7L;
+				INFOPLIST_FILE = "MovieApp copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.brotecs.MovieApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		11E932B2258DC756000612FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -750,6 +910,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1133D19A258E0B3C0068AEAF /* Build configuration list for PBXNativeTarget "Telenor_Movie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1133D19B258E0B3C0068AEAF /* Debug */,
+				1133D19C258E0B3C0068AEAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		11E93285258DC751000612FD /* Build configuration list for PBXProject "MovieApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -759,7 +928,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11E932B4258DC756000612FD /* Build configuration list for PBXNativeTarget "MovieApp" */ = {
+		11E932B4258DC756000612FD /* Build configuration list for PBXNativeTarget "GP_Movie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11E932B5258DC756000612FD /* Debug */,
