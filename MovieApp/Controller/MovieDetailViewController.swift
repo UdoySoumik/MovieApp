@@ -49,6 +49,23 @@ class MovieDetailViewController: UIViewController , UITableViewDelegate, UITable
                     if let imgPath = data?["poster_path"] as? String, let imgURL = URL(string:"https://image.tmdb.org/t/p/w342\(imgPath)" ){
                         self.postarImageView.sd_setImage(with: imgURL, placeholderImage: UIImage(), options: .progressiveLoad)
                     }
+                    
+                    if self.type == "tv"{
+                        var favTVArray = (UserDefaults.standard.array(forKey: "FavouriteTV") ?? []) as [Int]
+                        if let id = self.movieInfoDetail?["id"] as? Int{
+                            if favTVArray.contains(id){
+                                self.favouriteButton.setTitle("Remove Favourite", for: .normal)
+                            }
+                        }
+                    }
+                    else{
+                        var favMovArray = (UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []) as! [Int]
+                        if let id = self.movieInfoDetail?["id"] as? Int{
+                            if favMovArray.contains(id){
+                                self.favouriteButton.setTitle("Remove Favourite", for: .normal)
+                            }
+                        }
+                    }
                 }
                 
                 
@@ -86,16 +103,19 @@ class MovieDetailViewController: UIViewController , UITableViewDelegate, UITable
             if type == "tv"{
                 var favTVArray = (UserDefaults.standard.array(forKey: "FavouriteTV") ?? []) as [Int]
                 if let id = self.movieInfoDetail?["id"] as? Int{
-                    
-                    favTVArray.append(id)
-                    UserDefaults.standard.setValue(favTVArray, forKey: "FavouriteTV")
+                    if !favTVArray.contains(id){
+                        favTVArray.append(id)
+                        UserDefaults.standard.setValue(favTVArray, forKey: "FavouriteTV")
+                    }
                 }
             }
             else{
-                var favMovArray = UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []
-                if let id = self.movieInfoDetail?["id"]{
-                    favMovArray.append(id)
-                    UserDefaults.standard.setValue(favMovArray, forKey: "FavouriteMovie")
+                var favMovArray = (UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []) as [Int]
+                if let id = self.movieInfoDetail?["id"] as? Int{
+                    if !favMovArray.contains(id){
+                        favMovArray.append(id)
+                        UserDefaults.standard.setValue(favMovArray, forKey: "FavouriteMovie")
+                    }
                 }
             }
             sender.setTitle("Remove Favourite", for: .normal)
