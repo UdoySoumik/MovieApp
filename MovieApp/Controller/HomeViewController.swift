@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var homeTableView: UITableView!
@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         ApiManager.shared.fetchTrendingContent { (success, err, recievedData) in
-            print(recievedData)
+           // print(recievedData)
             if let contentArr = recievedData{
                 self.trendingContentArr = contentArr
                 DispatchQueue.main.async {
@@ -58,6 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             cell?.movieNameLabel.text = trendingContentArr[indexPath.row]["title"] as? String
             cell?.movieRating.text = "\(trendingContentArr[indexPath.row]["vote_average"] as? Double ?? 0.0)"
             cell?.releaseDate.text = trendingContentArr[indexPath.row]["release_date"] as? String
+            
             break
         default:
             break
