@@ -84,8 +84,9 @@ class MovieDetailViewController: UIViewController , UITableViewDelegate, UITable
     @IBAction func addFavouriteButtonPressed(_ sender: UIButton) {
         if sender.titleLabel?.text == "Add to Favourite"{
             if type == "tv"{
-                var favTVArray = UserDefaults.standard.array(forKey: "FavouriteTV") ?? []
-                if let id = self.movieInfoDetail?["id"]{
+                var favTVArray = (UserDefaults.standard.array(forKey: "FavouriteTV") ?? []) as [Int]
+                if let id = self.movieInfoDetail?["id"] as? Int{
+                    
                     favTVArray.append(id)
                     UserDefaults.standard.setValue(favTVArray, forKey: "FavouriteTV")
                 }

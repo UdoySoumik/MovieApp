@@ -205,7 +205,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVv-hg-pTK" secondAttribute="bottom" id="sVI-Px-5cB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oAH-zZ-faC"/>
+                    <navigationItem key="navigationItem" id="oAH-zZ-faC">
+                        <barButtonItem key="rightBarButtonItem" title="Favourite" style="plain" id="8ci-Tr-tVq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="favouriteListPressed:" destination="BYZ-38-t0r" id="oSc-oC-ipB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="homeTableView" destination="hVv-hg-pTK" id="2xH-yH-Owc"/>
                     </connections>
@@ -309,6 +316,93 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHX-zq-GnI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1986.9565217391305" y="58.928571428571423"/>
+        </scene>
+        <!--Favourites Table View Controller-->
+        <scene sceneID="Xv4-Mx-8PN">
+            <objects>
+                <tableViewController storyboardIdentifier="FavouritesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VSG-N1-gNx" customClass="FavouritesTableViewController" customModule="GP_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TFb-Oh-YN8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favListTableViewCell" rowHeight="295" id="ugo-if-sYW" customClass="TrendingTableViewCell" customModule="GP_Movie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="295"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ugo-if-sYW" id="8ZW-KD-MjG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="295"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="y0J-R0-nwa">
+                                            <rect key="frame" x="149" y="10" width="116" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NJU-JK-9Kd">
+                                            <rect key="frame" x="82" y="44" width="250" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="250" id="elA-Lo-WWc"/>
+                                                <constraint firstAttribute="height" constant="200" id="mKA-pe-mMA"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-lY-Sco">
+                                            <rect key="frame" x="182.5" y="252" width="49" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ocW-nJ-NWb">
+                                            <rect key="frame" x="78.5" y="286" width="257.5" height="20.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpe-pt-Is2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="111.5" height="20.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="111.5" id="Xjm-wj-SWw"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 January, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YJ-7r-TpS">
+                                                    <rect key="frame" x="116.5" y="0.0" width="141" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y0J-R0-nwa" firstAttribute="centerX" secondItem="8ZW-KD-MjG" secondAttribute="centerX" id="7Co-58-ydZ"/>
+                                        <constraint firstItem="y0J-R0-nwa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8ZW-KD-MjG" secondAttribute="leading" constant="30" id="DKD-Qe-hQ9"/>
+                                        <constraint firstItem="NJU-JK-9Kd" firstAttribute="top" secondItem="y0J-R0-nwa" secondAttribute="bottom" constant="10" id="Ipl-zR-8uI"/>
+                                        <constraint firstItem="ocW-nJ-NWb" firstAttribute="centerX" secondItem="8ZW-KD-MjG" secondAttribute="centerX" id="Rc3-oe-aIL"/>
+                                        <constraint firstItem="NJU-JK-9Kd" firstAttribute="centerX" secondItem="8ZW-KD-MjG" secondAttribute="centerX" id="UC5-Iq-LBb"/>
+                                        <constraint firstItem="y0J-R0-nwa" firstAttribute="top" secondItem="8ZW-KD-MjG" secondAttribute="top" constant="10" id="Z9r-Dx-HaM"/>
+                                        <constraint firstItem="MhI-lY-Sco" firstAttribute="top" secondItem="NJU-JK-9Kd" secondAttribute="bottom" constant="8" symbolic="YES" id="d9j-Ug-Dlx"/>
+                                        <constraint firstItem="MhI-lY-Sco" firstAttribute="centerX" secondItem="8ZW-KD-MjG" secondAttribute="centerX" id="qCS-u9-APG"/>
+                                        <constraint firstItem="ocW-nJ-NWb" firstAttribute="top" secondItem="MhI-lY-Sco" secondAttribute="bottom" constant="13.5" id="qRy-yr-fYZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="movieNameLabel" destination="y0J-R0-nwa" id="JB9-fn-FX7"/>
+                                    <outlet property="moviePosterImage" destination="NJU-JK-9Kd" id="pfI-VN-mFp"/>
+                                    <outlet property="movieRating" destination="MhI-lY-Sco" id="7hr-F9-YMy"/>
+                                    <outlet property="releaseDate" destination="7YJ-7r-TpS" id="WOq-4B-L50"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VSG-N1-gNx" id="weL-5Q-bng"/>
+                            <outlet property="delegate" destination="VSG-N1-gNx" id="HlS-gP-Nwn"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDd-Ha-GZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3101" y="67"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VxS-6Q-tJL">

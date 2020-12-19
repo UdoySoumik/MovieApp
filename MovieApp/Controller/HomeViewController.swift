@@ -103,6 +103,16 @@ class HomeViewController: UIViewController{
             self.present(alert, animated: true, completion: nil)
         }
     }
+    @IBAction func favouriteListPressed(_ sender: UIBarButtonItem) {
+        var favMovArray = (UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []) as! [Int]
+        var favTVArray:[Int] = (UserDefaults.standard.array(forKey: "FavouriteTV") ?? []) as! [Int]
+        var tempMovList = self.popularMoviesArr.filter{ favMovArray.contains($0["id"] as! Int)}
+        var tempTvList = self.popularTVSeriesArr.filter{ favTVArray.contains($0["id"] as! Int)}
+        tempMovList.append(contentsOf: tempTvList) as? [[String:Any]]
+        let favVC = storyboard?.instantiateViewController(identifier: "FavouritesTableViewController") as! FavouritesTableViewController
+        favVC.favList = tempMovList
+        self.navigationController?.pushViewController(favVC, animated: true)
+    }
     
 }
 extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
