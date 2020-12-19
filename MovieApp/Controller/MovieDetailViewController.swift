@@ -82,6 +82,47 @@ class MovieDetailViewController: UIViewController , UITableViewDelegate, UITable
     }
     */
     @IBAction func addFavouriteButtonPressed(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Add to Favourite"{
+            if type == "tv"{
+                var favTVArray = UserDefaults.standard.array(forKey: "FavouriteTV") ?? []
+                if let id = self.movieInfoDetail?["id"]{
+                    favTVArray.append(id)
+                    UserDefaults.standard.setValue(favTVArray, forKey: "FavouriteTV")
+                }
+            }
+            else{
+                var favMovArray = UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []
+                if let id = self.movieInfoDetail?["id"]{
+                    favMovArray.append(id)
+                    UserDefaults.standard.setValue(favMovArray, forKey: "FavouriteMovie")
+                }
+            }
+            sender.setTitle("Remove Favourite", for: .normal)
+        }else{
+            if type == "tv"{
+                var favTVArray:[Int] = (UserDefaults.standard.array(forKey: "FavouriteTV") ?? []) as! [Int]
+                if let id = self.movieInfoDetail?["id"] as? Int{
+                    if let removeID = favTVArray.firstIndex(of:id){
+                        favTVArray.remove(at: removeID)
+                    }
+                    
+                    UserDefaults.standard.setValue(favTVArray, forKey: "FavouriteTV")
+                }
+            }
+            else{
+                var favMovArray = (UserDefaults.standard.array(forKey: "FavouriteMovie") ?? []) as! [Int]
+                if let id = self.movieInfoDetail?["id"] as? Int{
+                    if let removeID = favMovArray.firstIndex(of:id){
+                        favMovArray.remove(at: removeID)
+                    }
+                    
+                    UserDefaults.standard.setValue(favMovArray, forKey: "FavouriteMovie")
+                }
+            }
+            
+            sender.setTitle("Add to Favourite", for: .normal)
+        }
+        
     }
     
 }
