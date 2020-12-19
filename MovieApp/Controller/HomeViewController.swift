@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class HomeViewController: UIViewController{
     
     var refreshControl = UIRefreshControl()
     @IBOutlet weak var homeTableView: UITableView!
@@ -104,6 +104,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+}
+extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -188,6 +191,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         header.textLabel?.textColor = UIColor.black
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 2{
+            var detailVC = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
+            detailVC?.movieID = self.trendingContentArr[indexPath.row]["id"] as? Int
+            detailVC?.type = self.trendingContentArr[indexPath.row]["media_type"] as? String
+            self.navigationController?.pushViewController(detailVC!, animated: true)
+        }
+    }
+    
+}
+
+extension HomeViewController:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let collectionTableCell = collectionView.superview?.superview as? CollectionTableViewCell{
             switch collectionTableCell.indexPath?.section {
@@ -253,6 +269,31 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 270, height: 350)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var contentInfo:[String:Any]
+        var type = ""
+        if let collectionTableCell = collectionView.superview?.superview as? CollectionTableViewCell{
+            switch collectionTableCell.indexPath?.section {
+            case 0:
+                contentInfo = self.popularMoviesArr[indexPath.row]
+                type = "movie"
+                break
+            case 1:
+                contentInfo = self.popularTVSeriesArr[indexPath.row]
+                type = "tv"
+                break
+            default:
+                contentInfo = [String:Any]()
+                break
+            }
+            
+            let detailVC = storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as? MovieDetailViewController
+            detailVC?.movieID = contentInfo["id"] as? Int
+            detailVC?.type = type
+            self.navigationController?.pushViewController(detailVC!, animated: true)
+        }
     }
     
 }

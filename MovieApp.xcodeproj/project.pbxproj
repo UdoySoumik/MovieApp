@@ -22,6 +22,8 @@
 		1133D198258E0B3C0068AEAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11E93293258DC751000612FD /* Main.storyboard */; };
 		1133D1B0258E0C6C0068AEAF /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */; };
 		1133D1B5258E0C740068AEAF /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */; };
+		1133D1BB258E19A10068AEAF /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1BA258E19A00068AEAF /* MovieDetailViewController.swift */; };
+		1133D1C9258E21DD0068AEAF /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1133D1BA258E19A00068AEAF /* MovieDetailViewController.swift */; };
 		11B882D3258DD3E500E99BA0 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D2258DD3E500E99BA0 /* ApiManager.swift */; };
 		11B882D8258DDD5C00E99BA0 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */; };
 		11E9328E258DC751000612FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E9328D258DC751000612FD /* AppDelegate.swift */; };
@@ -61,6 +63,7 @@
 		1133D19D258E0B3C0068AEAF /* Telenor_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Telenor_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1133D19E258E0B3C0068AEAF /* MovieApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MovieApp copy-Info.plist"; path = "/Users/soumik/Desktop/MovieApp/MovieApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		1133D1AF258E0C6C0068AEAF /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		1133D1BA258E19A00068AEAF /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		11B882D2258DD3E500E99BA0 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
 		11E9328A258DC751000612FD /* GP_Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GP_Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +207,7 @@
 				11B882D7258DDD5C00E99BA0 /* TrendingTableViewCell.swift */,
 				1133D17F258DF9690068AEAF /* CollectionTableViewCell.swift */,
 				1133D184258DFEDD0068AEAF /* HomeCollectionViewCell.swift */,
+				1133D1BA258E19A00068AEAF /* MovieDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -553,6 +557,7 @@
 				1133D190258E0B3C0068AEAF /* HomeViewController.swift in Sources */,
 				1133D191258E0B3C0068AEAF /* AppDelegate.swift in Sources */,
 				1133D1B5258E0C740068AEAF /* ViewExtension.swift in Sources */,
+				1133D1C9258E21DD0068AEAF /* MovieDetailViewController.swift in Sources */,
 				1133D192258E0B3C0068AEAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +573,7 @@
 				11E93292258DC751000612FD /* HomeViewController.swift in Sources */,
 				11E9328E258DC751000612FD /* AppDelegate.swift in Sources */,
 				1133D1B0258E0C6C0068AEAF /* ViewExtension.swift in Sources */,
+				1133D1BB258E19A10068AEAF /* MovieDetailViewController.swift in Sources */,
 				11E93290258DC751000612FD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
